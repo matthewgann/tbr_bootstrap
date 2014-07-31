@@ -1,0 +1,33 @@
+/* executivesearch.tbr.edu */
+
+.front .title {
+	display: block;
+}
+
+.view-searches .item-list ul {
+	margin: 0;
+	list-style: none;
+	list-style-type: none;
+}
+.view-searches .item-list ul h3 {
+	font-size: 16px;
+}
+#main #content-wrapper li {
+	margin: 0;
+}
+.form-item-toa-validate {
+	border: 1px solid #d13138;
+	padding: 6px;	
+}
+.view .attachment .views-field {
+	width: 200px;
+	float: left;
+}
+.view .attachment .views-label {
+	font-weight: bold;
+}
+.view .attachment .view-content {
+	border: 1px solid #eaeaea;
+	padding: 4px;
+	margin-bottom: 10px;
+}

@@ -1,0 +1,29 @@
+/* helpdesk.webapps.tbr.edu */
+
+.front .title {
+	display: block;
+}
+.node-type-ticket #content-wrapper {
+	background: #eaeaea;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+}
+.node-type-ticket #comments {
+	background: #ffffff;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+}
+.form-type-managed-file .description, #switch_edit-comment-body-und-0-value {
+	display: none !important;
+}
+.comment-form #edit-author--2, label[for=edit-comment-body-und-0-value] {
+	display: none;
+}
+.comment {
+	background: #eaeaea;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+}
