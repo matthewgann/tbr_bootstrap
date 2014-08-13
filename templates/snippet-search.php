@@ -16,10 +16,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
         <input type="radio" class="radiosearch" id="search-site-section" value="site:policies.tbr.edu" name="sitesearch" checked="yes">
         All Policies &amp; Guidelines</label>
       <?php } 
-      else if($tbr_host == "executivesearch-tbr-edu") {
-      	echo "";
-      }
-      else { ?>
+	else { ?>
       <label class="search-area" for="search-site-section">
         <input type="radio" class="radiosearch" id="search-site-section" value="xxxx" name="sitesearch">
         This Site Section</label>
@@ -29,6 +26,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
         <input type="radio" class="radiosearch" id="search-people" value="search-people" name="sitesearch">
         System Office Staff</label>
         -->
+        
       <label class="search-area" for="search-all-tbr">
         <input type="radio" class="radiosearch" id="search-all-tbr" value="" name="sitesearch">
         All of TBR.edu</label>

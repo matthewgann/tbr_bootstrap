@@ -10,6 +10,10 @@
             }
         });
         
+        //Wrapping all h2's with a div to add 
+        $('#content h2').wrap('<div class="h2header" />'); 
+
+        
         $("#do-site-search").click(function(e) {
 	         e.preventDefault();
 	         var globalsearchterm = $('.global-search-left input[type=text]').val();

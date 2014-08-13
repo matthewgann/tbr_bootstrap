@@ -43,8 +43,10 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
             <?php } ?>
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs &amp; Initiatives <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="http://www.tbrmobile.org">Emerging Technologies &amp; Mobilization</a></li>
+              
+                <li><a href="http://www.rodp.org">Regents Online Campus Collaborative</a></li>
                 <li><a href="http://www.tntransferpathway.org">TN Transfer Pathways</a></li>
+                <li><a href="http://www.tnpromise.gov">TN Promise</a></li>
               </ul>
             </li>
             <li class="show-search-list"><a href="#" id="show-search">Search <img src="/<?php echo $tbr_base_theme; ?>/images/search.png" alt="Show Search Form"></a></li>
@@ -52,12 +54,13 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
         </div>
       </div>
     </div>
-              <?php if($tbr_host == "tbrmain-tbrweb05-tbr-edu"){ ?>
+     <?php if($tbr_host == "tbrmain-tbrweb05-tbr-edu"){ ?>
     <div id="top-logo" class="span4"> <a href="http://tbrmain.tbrweb05.tbr.edu" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
 
-<?php } else { ?>
+            <?php } else { ?>
     <div id="top-logo" class="span4"> <a href="http://www.tbr.edu" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
-  <?php } ?>
+            <?php } ?>
+
     <!-- #top-logo --> 
   </div>
   <!-- .container --> 
@@ -80,8 +83,11 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 <div id="header" class="clearfix">
   <div class="container">
     <div class="row">
-      <?php /* <div id="logo" class="site-logo span4"> <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> */ ?>
+
+ 
       <div id="logo" class="site-logo span4"> <a href="http://www.tbr.edu" title="<?php print t('Home'); ?>" rel="home"> <img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> </div>
+
+
       <div id="main-menu" class="span9">
         <div class="navbar main-menu-navi">
           <div class="navbar-inner"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".mainbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
@@ -107,7 +113,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 	                <li><a href="/chancellor">Chancellor</a></li>
 	                <li><a href="/academics">Academics</a></li>
 	                <li class="dropdown">
-	                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
+	                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Offices <b class="caret"></b></a>
 							<ul class="dropdown-menu subdropdown" role="menu">
    
 						        <li class="column-menu">
@@ -122,7 +128,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 						                <li><a href="/it">Information Technology</a></li>
 						                <li><a href="/oesi">Organizational Effectiveness and Strategic Initiatives</a></li>
 						                <li><a href="/audit">System-wide Internal Audit</a></li>
-						                <li><a href="tcats">Tennessee Colleges of Applied Technology</a></li>
+						                <li><a href="/tcats">Tennessee Colleges of Applied Technology</a></li>
 						            </ul>
 						        </li>
 						        <?php /*
@@ -141,7 +147,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 					</li>
 	                <li><a href="https://policies.tbr.edu">Policies &amp; Guidelines</a></li>
 	                <li><a href="/communications/news">News &amp; Events</a></li>
-	                <li><a href="">Contacts</a></li>
+	                <li><a href="/contacts">Contacts</a></li>
                 <!--<li><a href="/">Especially For...</a></li>-->
                 <?php } else { ?> 
 	                <li><a href="http://tbr.edu/tbrtest/">Board of Regents</a></li>
@@ -155,9 +161,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
               </ul>
               
               <!-- /#primary-menu -->
-              <?php if (!empty($page['navigation'])): ?>
-              <?php print render($page['navigation']); ?>
-              <?php endif; ?>
+              
             </div>
           </div>
         </div>
@@ -255,6 +259,9 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
             <?php if ($action_links): ?>
             <ul class="action-links">
               <?php print render($action_links); ?>
+              <?php if (!empty($page['navigation'])): ?>
+              <?php print render($page['navigation']); ?>
+              <?php endif; ?>
             </ul>
             <?php endif; ?>
           </div>

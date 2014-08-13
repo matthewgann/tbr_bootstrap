@@ -37,6 +37,7 @@
    }
   </style>
   <?php print $scripts; ?>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53ea780006145c89"></script>
   <!--[if IE 7]>
   <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'open_framework') . '/fontawesome/css/font-awesome-ie7.min.css'; ?>">
   <![endif]-->
