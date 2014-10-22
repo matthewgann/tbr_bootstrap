@@ -22,4 +22,10 @@ function tbr_bootstrap_preprocess_html(&$variables) {
     drupal_add_css("{$path}/css/{$filename}", array('group' => CSS_THEME, 'every_page' => true, 'weight' => 9999));
   }
 
+}'every_page' => true, 'weight' => 9999));
+  }
+  if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/{$path}/js/{$filenamejs}")) {
+    drupal_add_js("{$path}/js/{$filenamejs}", array('group' => JS_THEME, 'every_page' => true, 'weight' => 9999));
+  }
+
 }

@@ -40,4 +40,5 @@ regions[content_col4-4] = Content: 4-column stacked (4)
 regions[content_lower] = Content: Lower
 regions[content_bottom] = Content: Bottom
 regions[main_lower] = Main: Lower
+regions[main_bottom] = Main: Bottomain: Lower
 regions[main_bottom] = Main: Bottom

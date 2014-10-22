@@ -74,3 +74,9 @@ ul.policy-exhibits li span.clearfix:before, ul.policy-exhibits li span.clearfix:
 .view-exhibits-listing h3 {
 	font-size: 16px;
 }
+
+@media (min-width: 979px) {
+	.front #main {
+		margin-top: 0px;
+	}
+}

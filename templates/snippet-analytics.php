@@ -25,4 +25,9 @@ switch ($tbr_host) {
 
 </script>
 <!-- /analytics-script --> 
+<?php } ?>ga('send', 'pageview');
+
+</script>
+<script src='//rum.monitis.com/get/jsbenchmark.min.js?id=3023' type='text/javascript' async='async'></script>
+<!-- /analytics-script --> 
 <?php } ?>
