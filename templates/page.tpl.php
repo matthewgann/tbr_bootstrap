@@ -28,7 +28,8 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
       ?>
     </div>
   </div>
-</div><!-- /#global-search -->
+</div>
+<!-- /#global-search -->
 
 <div id="global-header">
   <div class="container">
@@ -36,31 +37,14 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
       <div class="navbar global-nav-navi">
         <div class="navbar-inner">
           <ul class="nav">
-          <?php if($tbr_host == "tbrmain-tbrweb05-tbr-edu"){ ?>
-            <li><a href="/institutions">Institutions</a></li>
-            <?php } else { ?>
-            <li><a href="http://tbr.edu/schools/default.aspx?id=2436">Institutions</a></li>
-            <?php } ?>
-            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programs &amp; Initiatives <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-              
-                <li><a href="http://www.rodp.org">Regents Online Campus Collaborative</a></li>
-                <li><a href="http://www.tntransferpathway.org">TN Transfer Pathways</a></li>
-                <li><a href="http://www.tnpromise.gov">TN Promise</a></li>
-              </ul>
-            </li>
-            <li class="show-search-list"><a href="#" id="show-search">Search <img src="/<?php echo $tbr_base_theme; ?>/images/search.png" alt="Show Search Form"></a></li>
+            <li><a href="https://www.tbr.edu/institutions/our-institutions" class="top-nav-institutions">Our Institutions</a></li>
+            <li><a href="https://www.tbr.edu/initiatives/programs-and-initiatives" class="top-nav-programs">Programs &amp; Initiatives</a></li>
+            <li class="show-search-list"><a href="#" id="show-search" class="top-nav-search">Search</a></li>
           </ul>
         </div>
       </div>
     </div>
-     <?php if($tbr_host == "tbrmain-tbrweb05-tbr-edu"){ ?>
-    <div id="top-logo" class="span4"> <a href="http://tbrmain.tbrweb05.tbr.edu" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
-
-            <?php } else { ?>
-    <div id="top-logo" class="span4"> <a href="http://www.tbr.edu" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
-            <?php } ?>
-
+    <div id="top-logo" class="span4"> <a href="https://www.tbr.edu/" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
     <!-- #top-logo --> 
   </div>
   <!-- .container --> 
@@ -83,126 +67,55 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 <div id="header" class="clearfix">
   <div class="container">
     <div class="row">
-
- 
-      <div id="logo" class="site-logo span4"> <a href="http://www.tbr.edu" title="<?php print t('Home'); ?>" rel="home"> <img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> </div>
-
-
-      <div id="main-menu" class="span9">
-        <div class="navbar main-menu-navi">
-          <div class="navbar-inner"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".mainbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-            <div class="nav-collapse mainbar">
-              <nav role="navigation">
-              <?php //print render($primary_nav); ?>
-              <ul class="menu nav">
-                <?php /*<li class="dropdown first">
-              		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Board of Regents <b class="caret"></b></a>
-              		<ul class="dropdown-menu">
-              			<li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="nav-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-              	</li>
-              	*/ ?>
-                <?php if($tbr_host == "tbrmain-tbrweb05-tbr-edu"){ ?>
-	                <li><a href="/board">Board of Regents</a></li>
-	                <li><a href="/chancellor">Chancellor</a></li>
-	                <li><a href="/academics">Academics</a></li>
-	                <li class="dropdown">
-	                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Offices <b class="caret"></b></a>
-							<ul class="dropdown-menu subdropdown" role="menu">
-   
-						        <li class="column-menu">
-						            <ul>
-						                <?php //<li>Office</li> ?>
-						                <li><a href="/chancellor">Chancellor</a></li>
-						                <li><a href="/academics">Academic Affairs</a></li>
-						                <li><a href="/administration">Administration and Facilities Development</a></li>
-						                <li><a href="/business">Business and Finance</a></li>
-						                <li><a href="/cc">Community Colleges</a></li>
-						                <li><a href="/generalcounsel">General Counsel</a></li>
-						                <li><a href="/it">Information Technology</a></li>
-						                <li><a href="/oesi">Organizational Effectiveness and Strategic Initiatives</a></li>
-						                <li><a href="/audit">System-wide Internal Audit</a></li>
-						                <li><a href="/tcats">Tennessee Colleges of Applied Technology</a></li>
-						            </ul>
-						        </li>
-						        <?php /*
-						        <li class="column-menu">
-						            <ul>
-						                <li>Column 2</li>
-						                <li><a href="#">Business and Finance</a></li>
-						                <li><a href="#">Item</a></li>
-						                <li><a href="#">Item</a></li>
-						                <li><a href="#">Item</a></li>
-						            </ul>
-						
-						      </li>
-						      */ ?>
-						  </ul>                    
-					</li>
-	                <li><a href="https://policies.tbr.edu">Policies &amp; Guidelines</a></li>
-	                <li><a href="/communications/news">News &amp; Events</a></li>
-	                <li><a href="/contacts">Contacts</a></li>
-                <!--<li><a href="/">Especially For...</a></li>-->
-                <?php } else { ?> 
-	                <li><a href="http://tbr.edu/tbrtest/">Board of Regents</a></li>
-	                <li><a href="http://tbr.edu/offices/chancellor.aspx?id=802">Chancellor</a></li>
-	                <li><a href="http://tbr.edu/offices/academicaffairs.aspx?id=1172">Academics</a></li>
-	                <li><a href="http://tbr.edu/offices/default.aspx?id=1198">Administration</a></li>
-	                <li><a href="https://policies.tbr.edu">Policies &amp; Guidelines</a></li>
-	                <li><a href="http://tbr.edu/news/default.aspx">News & Reports</a></li>
-	                <!--<li><a href="/">Especially For...</a></li>-->
-              <?php } ?>
-              </ul>
-              
-              <!-- /#primary-menu -->
-              
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="logo" class="site-logo span4"> <a href="https://www.tbr.edu" title="<?php print t('Home'); ?>" rel="home"> <img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> </div>
     </div>
   </div>
 </div>
 <!-- /#header -->
 
-<?php /*
-<div id="header" class="clearfix">
+<div id="social-menu">
   <div class="container">
     <div class="row">
-      <div id="logo" class="site-logo span4"> <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> 
-      	<img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> 
-      </div>
-      <div id="main-menu" class="span9">
-        <div class="navbar">
-          <div class="navbar-inner"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".mainbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-            <?php if ($primary_nav || !empty($page['navigation'])): ?>
-            <div class="nav-collapse mainbar">
-              <nav role="navigation">
-              <?php if (($primary_nav) && empty($page['navigation'])): ?>
-              <?php print render($primary_nav); ?> 
-              <!-- /#primary-menu -->
-              <?php endif; ?>
-              <?php if (!empty($page['navigation'])): ?>
-              <?php print render($page['navigation']); ?>
-              <?php endif; ?>
+      <ul class="socialnav">
+        <li><a href="https://www.facebook.com/tnregents" class="navfacebook"><i class="fa fa-facebook-square"></i></a></li>
+        <li><a href="https://www.twitter.com/tnregents" class="navtwitter"><i class="fa fa-twitter-square"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="main-menu" class="clearfix site-main-menu">
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <?php //if ($page['search_box']): ?>
+          <div id="nav-search" class="nav-search">
+            <?php
+          // Include Search Snippet
+		  include("snippet-search-mobile.php");  
+          ?>
+          </div>
+          <?php //endif; ?>
+          <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+          <div class="nav-collapse collapse" style="height: 0px;">
+            <nav id="main-nav" role="navigation">
+              <?php //print render($primary_nav); ?>
+              <ul class="menu nav">
+                <?php 
+				// Include Search Snippet
+				include("snippet-menu.php"); 
+                ?>
+              </ul>
               
-            </div>
-            <?php endif; ?>
+              <!-- /#primary-menu --> 
+              
+            </nav>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- /#header -->
-
-*/ ?>
 <?php if ($page['header_unit']): ?>
 <div id="header-unit" class="clearfix">
   <div class="container">
@@ -380,7 +293,12 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
     <div class="container institutions">
       <div class="row">
         <div class="span12">
-          <div id="institution-logos-inner"> <img src="/<?php echo $tbr_base_theme; ?>/images/institution_logos.png" alt="TBR Institutions"> </div>
+          <div id="institution-logos-inner">
+            <?php 
+			      // Include Search Snippet
+			      include("snippet-institutions.php"); 
+			      ?>
+          </div>
         </div>
       </div>
     </div>
@@ -388,31 +306,93 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   <div id="other-footer">
     <div class="container">
       <div class="row">
-        <div id="bottom-text" class="span10">
+        <div id="bottom-text" class="span4">
           <div id="bottom-menu" class="clear-block">
             <ul>
-              <li><a href="http://www.tbr.edu">TBR Home</a></li>
-              <li><a href="http://tbr.edu/offices/chancellor.aspx?id=9037">Accessibility</a></li>
-              <li><a href="http://www.tbr.edu/contact/default.aspx?id=1162">Contact</a></li>
-              <li><a href="/google/search/">Search</a></li>
-              <!--<li><a href="#">Terms of Use</a></li> -->
-              <li><a href="http://www.tbr.edu/offices/generalcounsel.aspx?id=1126">Copyright Complaints</a></li>
+              <li class="list-heading">TBR Offices</li>
+              <ul>
+		        <li><a href="https://www.tbr.edu/chancellor/office-chancellor">Chancellor</a></li>
+		        <li><a href="https://www.tbr.edu/academics/office-academic-affairs">Academic Affairs</a></li>
+		        <li><a href="https://www.tbr.edu/administration/office-administration-and-facilities-development">Administration and Facilities Development</a></li>
+		        <li><a href="https://www.tbr.edu/business/office-business-and-finance">Business and Finance</a></li>
+		        <li><a href="https://www.tbr.edu/cc/office-community-colleges">Community Colleges</a></li>
+		        <li><a href="https://www.tbr.edu/generalcounsel/office-general-counsel">General Counsel</a></li>
+		        <li><a href="https://www.tbr.edu/it/office-information-technology">Information Technology</a></li>
+		        <li><a href="https://www.tbr.edu/oesi/office-organizational-effectiveness-and-strategic-initiatives">Organizational Effectiveness and Strategic Initiatives</a></li>
+		        <li><a href="https://www.tbr.edu/audit/office-system-wide-internal-audit">System-wide Internal Audit</a></li>
+		        <li><a href="https://www.tbr.edu/tcat/office-colleges-applied-technology">Colleges of Applied Technology (TCAT)</a></li>
+              </ul>
             </ul>
           </div>
+          <!-- #bottom-menu --> 
+          
+        </div>
+        <!-- #bottom-text -->
+        
+        <div id="bottom-text-two" class="span4">
+          <div id="bottom-menu" class="clear-block">
+            <ul>
+              <li class="list-heading">In Depth</li>
+              <ul>
+                <li><a href="https://www.tbr.edu/hr/working-tbr">Working at TBR</a></li>
+                <li><a href="https://www.tbr.edu/purchasing/how-do-business-tbr">Doing Business with the TBR</a></li>
+                <li><a href="https://www.tbr.edu/facilities/projects-requiring-designers">Facilities Bid Opportunities</a></li>
+                <li><a href="https://www.tbr.edu/contacts/contact-tbr">Contacts</a></li>
+                <li><a href="https://www.tbr.edu/institutions/our-institutions">Institutions</a></li>
+                <li><a href="https://www.tbr.edu/initiatives/regents-online-campus-collaborative-rocc">Online Learning (ROCC)</a>
+                <li><a href="https://www.tbr.edu/initiatives/tennessee-transfer-pathway">Tennessee Transfer Pathways</a></li>
+                <li><a href="https://www.tbr.edu/initiatives/tn-promise">Tennessee Promise</a>
+              </ul>
+              <li class="list-heading">About This Site</li>
+              <ul>
+                <li><a href="https://www.tbr.edu/web/web-accessibility">Accessibility</a></li>
+                <li><a href="https://www.tbr.edu/search">Search</a></li>
+                <li><a href="https://www.tbr.edu/web/tennessee-board-regents-privacy-statement">Privacy</a></li>
+                <li><a href="https://www.tbr.edu/web/report-website-issue">Report a Website Problem</a></li>
+              </ul>
+            </ul>
+          </div>
+          <!-- #bottom-menu --> 
+          
+        </div>
+        <!-- #bottom-text -->
+        
+        <div id="bottom-text-three" class="span4">
+          <div itemscope itemtype="http://schema.org/ContactPoint" id="main-address">
+            <div itemscope itemtype="schema.org/PostalAddress"> <span class="address-street" itemprop="streetAddress">1415 Murfreesboro Rd</span> <span class="address-city" itemprop="addressLocality">Nashville</span> <span class="address-state" itemprop="addressRegion">TN</span> <span class="address-zip" itemprop="postalCode">37217</span> </div>
+          </div>
+          <!-- #main-address -->
+          
           <div id="copyright-eeo">
             <p>The Tennessee Board of Regents (TBR) is one of the nation's largest higher education systems, governing 46 post-secondary educational institutions.
               The TBR system includes six universities, 13 two-year colleges and 27 colleges of applied technology, providing programs to more than 240,000 students across the state.</p>
-            <p>The TBR is an AA/EEO employer and does not discriminate on the basis of race, color, national origin, sex, disability, or age in its programs and activities.
-              Full Non-Discrimination Policy.</p>
+            <p>The TBR is an AA/EEO employer and does not discriminate on the basis of race, color, national origin, sex, disability, or age in its programs and activities. <a href="https://policies.tbr.edu/system-office-non-discrimination-policy" title="Non-Discrimination Policy">Full Non-Discrimination Policy.</a></p>
           </div>
-          <div id="vcard">
-            <p>&copy; <?php echo date("Y"); ?> <span class="fn org">Tennessee Board of Regents</span>, <span class="adr"><span class="locality">Nashville</span>, <span class="region">Tennessee</span> <span class="postal-code">37217</span></span></p>
+          <!-- #copyright-eeo -->
+          
+          <div class="btmlogin" id="bottom-login">
+            <?php if(!user_is_logged_in()){ ?>
+            <a href="#myuser" data-toggle="modal"><i class="fa fa-circle-o-notch"></i></a> 
+            
+            <!-- Modal -->
+            <div id="myuser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">TBR Login</h3>
+              </div>
+              <div class="modal-body"> <?php print render($page['login']); ?> </div>
+              <div class="modal-footer">
+                <?php //<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> ?>
+              </div>
+            </div>
+            <?php } else { echo '<a href="/user/logout"><i class="fa fa-times-circle"></i> Logout</a>'; } ?>
           </div>
+          <!-- #bottom-login --> 
         </div>
       </div>
     </div>
   </div>
 </div>
-<div id="toTop" class="btn btn-large icon-arrow-up"></div>
+<div id="toTop" class="btn btn-large"></div>
 <!-- /#to-top --> 
 <!-- /#global-footer --> 

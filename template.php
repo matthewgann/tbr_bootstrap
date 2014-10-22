@@ -14,15 +14,13 @@ function tbr_bootstrap_preprocess_html(&$variables) {
   //add host class in the body
   $variables['classes_array'][] = $tbr_host;
 
-  $filename = "host-{$tbr_host}.css";
+  $filenamecss = "host-{$tbr_host}.css";
+  $filenamejs = "host-{$tbr_host}.js";
   $path = drupal_get_path("theme", "tbr_bootstrap");
 
   //if the site specific style exists, then load it VERY last
-  if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/{$path}/css/{$filename}")) {
-    drupal_add_css("{$path}/css/{$filename}", array('group' => CSS_THEME, 'every_page' => true, 'weight' => 9999));
-  }
-
-}'every_page' => true, 'weight' => 9999));
+  if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/{$path}/css/{$filenamecss}")) {
+    drupal_add_css("{$path}/css/{$filenamecss}", array('group' => CSS_THEME, 'every_page' => true, 'weight' => 9999));
   }
   if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/{$path}/js/{$filenamejs}")) {
     drupal_add_js("{$path}/js/{$filenamejs}", array('group' => JS_THEME, 'every_page' => true, 'weight' => 9999));

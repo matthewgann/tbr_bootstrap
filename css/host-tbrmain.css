@@ -1,8 +1,5 @@
 /* MOVE TO MAIN STYLESHEET */
-body {
-	background: #e4dece url("../images/bg.png") repeat center top;
-	height: auto;
-}
+
 
 /* END OF MOVE */
 
@@ -27,40 +24,7 @@ body {
 }
 #home-systems {
 	height: auto;
-}
-.dropdown-menu {
-	background: none;
-}
-.dropdown-menu {
-	background: #eaeaea;
-}
-.dropdown-menu > li.column-menu ul {
-    display: inline-block;
-    list-style: none outside none;
-    margin-left: -10px;
-    position: relative;
-    border: none;
-    box-shadow: none;
-}
-.dropdown-menu > li.column-menu li {
-    display: inline;
-    float: left;
-    width: 100%;
-}
-.navbar .nav li.dropdown.open>.dropdown-toggle, .navbar .nav li.dropdown.active>.dropdown-toggle, .navbar .nav li.dropdown.open.active>.dropdown-toggle {
-	background: none;
-}
-.dropdown-menu>li>a {
-	text-decoration: none;
-	line-height: 24px;	
-}
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
-	background-color: #787f8a;
-	color: #eaeaea;
-	text-decoration: none;
-	background-image: none;
-}
-#block-views-recent-campus-news-block-1 .span4 {
+}#block-views-recent-campus-news-block-1 .span4 {
 	padding-bottom: 20px;
 }
 #block-views-recent-campus-news-block-1 .views-field-field_campus, .recent-campus-news-attachment-1-fields .views-field-field_campus {
@@ -174,25 +138,66 @@ body {
 	font-size: 24px;
 	font-weight: 400;
 }
+.homeinstitution a {
+	color: #fff;	
+}
+
+.view-id-homepage_systems .span4:hover, .front .span3:hover {
+	opacity: 0.8;
+}
 .view-more-releases {
 	text-align: right;	
 }
 
-/* END Homepage Statistics */
-
-
-/*
-.dropdown-menu > li.column-menu:first-child {
-    margin-left: 0;
+@media (min-width: 768px) and (max-width: 1200px) {
+	.front #views-bootstrap-grid-1 .views-field-body {
+		margin-top: -60px;
+		width: 29%;
+	}
 }
-
-.dropdown-menu >li.column-menu li:not(:first-child){
-	margin-left:10px;
+ @media (min-width: 768px) and (max-width: 979px) {
+	 .homestat {
+		 width: 18%;
+	 }
+	.homestatnum {
+		font-size: 30px;
+		line-height: 30px;
+	}
 }
+@media (max-width: 768px) {
 
-.dropdown-menu > li.column-menu li:first-child {
-    font-weight:bold;
-    font-size:1.5em;
-    color:#340f5a;
+	#global-footer #institution-logos .span12 {
+		margin-left: 0
+	}
+	#global-footer #institution-logos #institution-logos-inner {
+		text-align: left;
+	}
+	#block-views-homepage-systems-block {
+		clear: both;
+		margin-right: 40px;
+
+	}	
+	#block-views-homepage-systems-block img {
+		display: none;
+	}
+	.front #views-bootstrap-grid-1 .views-field-body {
+		position: relative;
+		width: 100%;
+		top: auto;
+		margin-top: auto;
+		float: none;
+	}
+
+	.homestat {
+		width: 90%;
+		text-align: center;
+		
+	}
+	.homestatnum {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.front #main-content.row {
+		margin-right: 0;
+	}
 }
-*/

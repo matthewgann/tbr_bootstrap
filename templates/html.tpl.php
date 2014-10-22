@@ -21,6 +21,7 @@
   <?php 
   	$gettingurlpart = explode('/', $_SERVER['REQUEST_URI']);
   	$gettingurlpart = $gettingurlpart[1];
+  	$tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   	
   	//print $gettingurlpart;
 
@@ -45,41 +46,10 @@
   <!--[if lt IE 9]>
     <script src="<?php print base_path() . drupal_get_path('theme', 'open_framework') . '/js/html5shiv.js'; ?>"></script>
   <![endif]-->
-  <?php
-  $mybrowvs = "";
-  
-  preg_match('/MSIE (.*?);/', $_SERVER['HTTP_USER_AGENT'], $matches);
-if(count($matches)<2){
-  preg_match('/Trident\/\d{1,2}.\d{1,2}; rv:([0-9]*)/', $_SERVER['HTTP_USER_AGENT'], $matches);
-}
-
-if (count($matches)>1){
-  //Then we're using IE
-  $version = $matches[1];
-
-  switch(true){
-    case ($version<=8):
-      $mybrowvs = "ie8";
-      break;
-
-    case ($version==9 || $version==10):
-      $mybrowvs = "ie910";
-      //IE9 & IE10!
-      break;
-
-    case ($version==11):
-      $mybrowvs = "ie11";
-      break;
-
-    default:
-      $mybrowvs="";
-  }
-}
-?>
 
 </head>
 
-<body class="<?php print $mybrowvs; ?> <?php print $classes; ?> <?php print $body_bg_type; ?> <?php print $body_bg_classes; ?> <?php print $front_heading_classes; ?> <?php print $breadcrumb_classes; ?> <?php print $border_classes; ?> <?php print $corner_classes; ?>" <?php print $attributes;?> <?php if ($body_bg_classes): ?>style="background: url('<?php print file_create_url(theme_get_setting('body_bg_path')); ?>') repeat top left;" <?php endif; ?>>
+<body class="<?php print $classes; ?> <?php print $body_bg_type; ?> <?php print $body_bg_classes; ?> <?php print $front_heading_classes; ?> <?php print $breadcrumb_classes; ?> <?php print $border_classes; ?> <?php print $corner_classes; ?>" <?php print $attributes;?> <?php if ($body_bg_classes): ?>style="background: url('<?php print file_create_url(theme_get_setting('body_bg_path')); ?>') repeat top left;" <?php endif; ?>>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>

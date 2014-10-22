@@ -11,6 +11,9 @@ switch ($tbr_host) {
     case "executivesearch-tbr-edu":
         $site_ga = "UA-38033554-8";
         break;
+    case "www-tbr-edu":
+        $site_ga = "UA-38033554-10";
+        break;
 }
 ?>
 <?php if(isset($site_ga)) { ?>
@@ -20,12 +23,8 @@ switch ($tbr_host) {
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '<?php echo $site_ga; ?>', 'tbr.edu');
+  ga('create', '<?php echo $site_ga; ?>', 'auto');
   ga('send', 'pageview');
-
-</script>
-<!-- /analytics-script --> 
-<?php } ?>ga('send', 'pageview');
 
 </script>
 <script src='//rum.monitis.com/get/jsbenchmark.min.js?id=3023' type='text/javascript' async='async'></script>

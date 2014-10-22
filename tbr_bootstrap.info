@@ -5,6 +5,7 @@ core = 7.x
 version = 1.0
 
 stylesheets[all][] = css/style.css
+stylesheets[all][] = css/font-awesome.min.css
 scripts[] = js/breakpoints.js
 scripts[] = js/script.js
 
@@ -40,5 +41,4 @@ regions[content_col4-4] = Content: 4-column stacked (4)
 regions[content_lower] = Content: Lower
 regions[content_bottom] = Content: Bottom
 regions[main_lower] = Main: Lower
-regions[main_bottom] = Main: Bottomain: Lower
 regions[main_bottom] = Main: Bottom
