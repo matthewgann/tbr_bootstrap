@@ -22,9 +22,9 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 <div id="global-search">
   <div class="container">
     <div class="global-search-inner">
-      <?php 
+      <?php
       // Include Search Snippet
-      include("snippet-search.php"); 
+      include("snippet-search.php");
       ?>
     </div>
   </div>
@@ -45,9 +45,9 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
       </div>
     </div>
     <div id="top-logo" class="span4"> <a href="https://www.tbr.edu/" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
-    <!-- #top-logo --> 
+    <!-- #top-logo -->
   </div>
-  <!-- .container --> 
+  <!-- .container -->
 </div>
 <!-- /#global-header -->
 
@@ -57,9 +57,9 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
     <div class="alert alert-error">
       <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
       <?php print render($page['emergency']); ?> </div>
-    <!-- /.alert alert-error --> 
+    <!-- /.alert alert-error -->
   </div>
-  <!-- /.container --> 
+  <!-- /.container -->
 </div>
 <?php endif; ?>
 <!-- /#emergency-header -->
@@ -92,7 +92,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
           <div id="nav-search" class="nav-search">
             <?php
           // Include Search Snippet
-		  include("snippet-search-mobile.php");  
+		  include("snippet-search-mobile.php");
           ?>
           </div>
           <?php //endif; ?>
@@ -101,14 +101,14 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
             <nav id="main-nav" role="navigation">
               <?php //print render($primary_nav); ?>
               <ul class="menu nav">
-                <?php 
+                <?php
 				// Include Search Snippet
-				include("snippet-menu.php"); 
+				include("snippet-menu.php");
                 ?>
               </ul>
-              
-              <!-- /#primary-menu --> 
-              
+
+              <!-- /#primary-menu -->
+
             </nav>
           </div>
         </div>
@@ -260,7 +260,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
           <div id="content-bottom" class="row-fluid"> <?php print render($page['content_bottom']); ?> </div>
           <?php endif; ?>
         </div>
-        <!-- /#content-wrap --> 
+        <!-- /#content-wrap -->
       </div>
       <!-- /#content -->
       <?php if ($page['sidebar_second']): ?>
@@ -294,9 +294,9 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
       <div class="row">
         <div class="span12">
           <div id="institution-logos-inner">
-            <?php 
+            <?php
 			      // Include Search Snippet
-			      include("snippet-institutions.php"); 
+			      include("snippet-institutions.php");
 			      ?>
           </div>
         </div>
@@ -324,11 +324,11 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
               </ul>
             </ul>
           </div>
-          <!-- #bottom-menu --> 
-          
+          <!-- #bottom-menu -->
+
         </div>
         <!-- #bottom-text -->
-        
+
         <div id="bottom-text-two" class="span4">
           <div id="bottom-menu" class="clear-block">
             <ul>
@@ -352,28 +352,28 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
               </ul>
             </ul>
           </div>
-          <!-- #bottom-menu --> 
-          
+          <!-- #bottom-menu -->
+
         </div>
         <!-- #bottom-text -->
-        
+
         <div id="bottom-text-three" class="span4">
           <div itemscope itemtype="http://schema.org/ContactPoint" id="main-address">
             <div itemscope itemtype="schema.org/PostalAddress"> <span class="address-street" itemprop="streetAddress">1415 Murfreesboro Rd</span> <span class="address-city" itemprop="addressLocality">Nashville</span> <span class="address-state" itemprop="addressRegion">TN</span> <span class="address-zip" itemprop="postalCode">37217</span> </div>
           </div>
           <!-- #main-address -->
-          
+
           <div id="copyright-eeo">
             <p>The Tennessee Board of Regents (TBR) is one of the nation's largest higher education systems, governing 46 post-secondary educational institutions.
               The TBR system includes six universities, 13 two-year colleges and 27 colleges of applied technology, providing programs to more than 240,000 students across the state.</p>
-            <p>The TBR is an AA/EEO employer and does not discriminate on the basis of race, color, national origin, sex, disability, or age in its programs and activities. <a href="https://policies.tbr.edu/system-office-non-discrimination-policy" title="Non-Discrimination Policy">Full Non-Discrimination Policy.</a></p>
+            <p>The TBR is an AA/EEO employer and does not discriminate on the basis of race, color, national origin, sex, disability, or age in its programs and activities. <a href="https://policies.tbr.edu/system-office/system-office-non-discrimination-policy" title="Non-Discrimination Policy">Full Non-Discrimination Policy.</a></p>
           </div>
           <!-- #copyright-eeo -->
-          
+
           <div class="btmlogin" id="bottom-login">
             <?php if(!user_is_logged_in()){ ?>
-            <a href="#myuser" data-toggle="modal"><i class="fa fa-circle-o-notch"></i></a> 
-            
+            <a href="#myuser" data-toggle="modal"><i class="fa fa-circle-o-notch"></i></a>
+
             <!-- Modal -->
             <div id="myuser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-header">
@@ -387,12 +387,12 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
             </div>
             <?php } else { echo '<a href="/user/logout"><i class="fa fa-times-circle"></i> Logout</a>'; } ?>
           </div>
-          <!-- #bottom-login --> 
+          <!-- #bottom-login -->
         </div>
       </div>
     </div>
   </div>
 </div>
 <div id="toTop" class="btn btn-large"></div>
-<!-- /#to-top --> 
-<!-- /#global-footer --> 
+<!-- /#to-top -->
+<!-- /#global-footer -->

@@ -15,14 +15,26 @@
                 scrollTop: 0
             }, 1000);
         });
-        
+
         //Removing understores from PDF links
         //var thislink = $('a[@href$=".pdf"]').text();
         //$('a[@href$=".pdf"]').text('pdfClass');
 		//str.replace('.pdf', '').replace(/[_\s]/g, '-')
-		
-        //Wrapping all h2's with a div to add 
+
+        //Wrapping all h2's with a div to add
         $('#content h2').wrap('<div class="h2header" />');
+
+        // Add section-home class to the first li element in the sidebar
+        $("#sidebar-first ul.menu li.first:first").addClass('section-home');
+
+        //Replace 4th span on homepage with twitter feed
+        $('#views-bootstrap-grid-6 .span3:nth-child(4)').empty().append('<a class="twitter-timeline" href="https://twitter.com/TNRegents" data-widget-id="519915935860158464">Tweets by @TNRegents</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
+
+        //Once a webform submit button is clicked, it disables it.
+        //$('input.webform-submit').click(function(){
+		//	$('input.webform-submit').attr("value","Submitting... This may take a moment to complete.");
+		//});
+		$( "<p>Please only click 'Submit' once. The form submission process takes a moment to complete.<br>You will be taken to a confirmation page when the process has completed.</p>" ).insertBefore( "input.webform-submit" );
 
         //We call this Sarah's fix
         // Add pdf icons to pdf links that aren't contained in the span class=file
@@ -31,8 +43,6 @@
         // Add txt icons to document links (doc, rtf, txt)
         //$("a[href$='.doc'], a[href$='.txt'], a[href$='.rft']").prepend('<img class="file-icon" alt="" title="application/pdf" src="/modules/file/icons/x-office-document.png"> ');
 
-        //Replace 4th span on homepage with twitter feed
-        $('#views-bootstrap-grid-2 .span3:nth-child(4)').empty().append('<a class="twitter-timeline" href="https://twitter.com/TNRegents" data-widget-id="519915935860158464">Tweets by @TNRegents</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
 
 		//Search functionality
         $("#do-site-search").click(function(e) {
@@ -53,10 +63,7 @@
 		//Webkit speech to text. Deprecated so remove next version.
         $('input[type=text]').attr('x-webkit-speech', 'x-webkit-speech');
 
-        // Add section-home class to the first li element in the sidebar     
-        $("#sidebar-first ul.menu li.first:first").addClass('section-home');
-        
-        //Add the twitter home button to the li with section-home class     
+        //Add the twitter home button to the li with section-home class
         //$("li.section-home a").prepend('<i class="icon-home">');
 
 
@@ -88,7 +95,7 @@
 	    })
 
 	    //Sticky Footer
-	
+
 	    function positionFooter() {
 	        var Footer = $("#footer");
 	        if ((($(document.body).height() + Footer.height()) < $(window).height() && Footer.css("position") == "fixed") || ($(document.body).height() < $(window).height() && Footer.css("position") != "fixed")) {
@@ -102,9 +109,9 @@
 	            });
 	        }
 	    }
-	
+
 	    // Sticky Global Footer
-	
+
 	    function positionGlobalfooter() {
 	        var Globalfooter = $("#global-footer");
 	        if ((($(document.body).height() + Globalfooter.height()) < $(window).height() && Globalfooter.css("position") == "fixed") || ($(document.body).height() < $(window).height() && Globalfooter.css("position") != "fixed")) {
@@ -118,7 +125,7 @@
 	            });
 	        }
 	    }
-	    
+
 	    positionFooter();
         $(window).scroll(positionFooter);
         $(window).resize(positionFooter);
@@ -133,11 +140,11 @@
 
     /*
 	// Menu Stuff
-	
-	
+
+
 	// Count the number of links on the page in the left-hand nav.
  // var linkCount = $('#block-menu-block-2 li').length;
- 
+
 //  if (linkCount > 2) { // If greater than 15...
     //alert('There are '+linkCount+' links in the left-hand nav.');
 

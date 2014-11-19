@@ -27,3 +27,40 @@ function tbr_bootstrap_preprocess_html(&$variables) {
   }
 
 }
+
+/**
+* Theme callback for an OpenGraph meta tag.
+*/
+function tbr_bootstrap_metatag_opengraph($variables) {
+  $element = &$variables['element'];
+  switch ($element['#name']) {
+    case 'og:image':
+      $element['#value'] = str_replace('https://', 'http://', $element['#value']);
+      break;
+  }
+  element_set_attributes($element, array('#name' => 'property', '#value' => 'content'));
+  unset($element['#value']);
+  return theme('html_tag', $variables);
+}
+
+/**
+* Change the formatting of table of files.
+*/
+function tbr_bootstrap_file_formatter_table($variables) {
+  //$header = array(t('File'), t('Size'),t('Upload Date'));
+  $header = array(t('File'), t('Size'));
+  $rows = array();
+  foreach ($variables['items'] as $delta => $item) {
+    if ($item['timestamp'] == 0) {
+      $item['timestamp'] = 1234567890;  //or whatever you want for the default date
+    }
+    $rows[] = array(
+      theme('file_link', array('file' => (object) $item)),
+      format_size($item['filesize']),
+      //format_date($item['timestamp'],'custom','m/d/Y'),
+    );
+  }
+
+  asort($rows);
+  return empty($rows) ? '' : theme('table', array('header' => $header, 'rows' => $rows));
+}

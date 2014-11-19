@@ -18,11 +18,11 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/images/icons/touch/apple-touch-icon-114x114.png'; ?>" />
 	<link rel="apple-touch-icon" sizes="144x144" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/images/icons/touch/apple-touch-icon-144x144.png'; ?>" />
   <?php print $styles; ?>
-  <?php 
+  <?php
   	$gettingurlpart = explode('/', $_SERVER['REQUEST_URI']);
   	$gettingurlpart = $gettingurlpart[1];
   	$tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
-  	
+
   	//print $gettingurlpart;
 
   	$filename = $_SERVER['DOCUMENT_ROOT'] . '/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/' . $gettingurlpart . '.jpg';
@@ -45,6 +45,7 @@
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
     <script src="<?php print base_path() . drupal_get_path('theme', 'open_framework') . '/js/html5shiv.js'; ?>"></script>
+   <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/css/ie.css'; ?>">
   <![endif]-->
 
 </head>

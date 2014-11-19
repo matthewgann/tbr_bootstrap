@@ -31,7 +31,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 		                <li><a href="#">Item</a></li>
 		                <li><a href="#">Item</a></li>
 		            </ul>
-		
+
 		      </li>
 		      */ ?>
   </ul>
@@ -40,11 +40,11 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   <ul class="dropdown-menu subdropdown" role="menu">
     <li class="column-menu">
       <ul>
-        <li><a href="https://www.tbr.edu/hr/working-tbr">Working at TBR</a></li>
+        <li><a href="https://www.tbr.edu/hr/employment-opportunities">Employment Opportunities</a></li>
         <li><a href="https://www.tbr.edu/purchasing/how-do-business-tbr">How to Do Business with the TBR</a></li>
-        <li><a href="https://www.tbr.edu/facilities/projects-requiring-designers">Facilities Bid Opportunities</a></li>
+        <li><a href="https://www.tbr.edu/facilities/doing-business-tbr-facilities">Facilities Bid Opportunities</a></li>
         <li><span title="" class="separator"><hr></span></li>
-        
+
         <li><a href="https://www.tbr.edu/institutions">Our Institutions</a></li>
         <li><a href="https://www.tbr.edu/institutions/getting-started">Getting Started as a Student at a TBR Institution</a></li>
         <li><a href="https://www.tbr.edu/academics/programs">Academic Programs at Our Institutions</a></li>

@@ -1,0 +1,9 @@
+.front #views-bootstrap-grid-1 .views-field-body {
+  background-color: #000;
+}
+.row-fluid .span4 {
+    width: 30%;
+}
+@media (min-width: 768px) {
+
+}

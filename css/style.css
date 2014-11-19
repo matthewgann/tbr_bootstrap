@@ -15,6 +15,7 @@ ul li.leaf {
 	list-style: none;
 	list-style-image: none;
 }
+
 /* ----- Body ------------------------ */
 body {
 	background: #e4dece url("../images/bg.png") repeat center top;
@@ -69,7 +70,7 @@ h1 {
 	line-height: 30px;
 }
 .views-field-title a {
-	text-decoration: none;	
+	text-decoration: none;
 }
 .label-above {
 	/* color: #d13138; */
@@ -108,7 +109,7 @@ h2:after {
 	position: absolute;
 	width: 100%;
 }
-h3 { 
+h3 {
 	font-weight: 600;
 	font-size: 1.2em;
 	margin-bottom: 0;
@@ -493,7 +494,7 @@ select {
 }
 .dropdown-menu>li>a {
 	text-decoration: none;
-	line-height: 24px;	
+	line-height: 24px;
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
 	background-color: #787f8a;
@@ -741,7 +742,7 @@ select {
 	font-size: 16px;
 	font-weight: 400;
 }
-.webform-component-select label, .webform-component-number label, .webform-component-textfield label, .webform-component-email label {
+.webform-component-select label, .webform-component-number label, .webform-component-textfield label, .webform-component-email label, .webform-component-browserinfo label {
 	float: left;
 	min-width: 220px;
 	padding-top: 5px;
@@ -1033,7 +1034,7 @@ table.views-table {
 	font-weight: bold;
 }
 .dirtitle {
-	
+
 }
 .view-tbr-staff-directory a {
 	color: #d13138;
@@ -1268,7 +1269,7 @@ td.diff-section-title, div.diff-section-title {
 		margin-top: -50px;
 	}
 }
-	
+
  @media (min-width: 979px) and (max-width: 1381px) {
 	#main #sidebar-first .block {
 		margin-left: 26px;
@@ -1324,7 +1325,7 @@ td.diff-section-title, div.diff-section-title {
 
 /* Landscape phone to portrait tablet */
  @media (max-width: 767px) {
-		
+
 	/* VIEWS ********************************** */
 		/* ----- Tables ---------------------- */
 	#main-menu .navbar {
@@ -1344,7 +1345,7 @@ td.diff-section-title, div.diff-section-title {
 		-moz-border-radius: 3px;
 		border-radius: 3px;
 	}
-	
+
 	.view-forms .views-field-created {
 		display: none;
 	}
@@ -1367,7 +1368,7 @@ td.diff-section-title, div.diff-section-title {
 	.nav-search form {
 		margin: 0;
 	}
-	
+
 }
 /* Landscape phones and down */
  @media (max-width: 480px) {
