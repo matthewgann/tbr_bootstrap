@@ -24,9 +24,9 @@ switch ($tbr_host) {
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', '<?php echo $site_ga; ?>', 'auto');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 
 </script>
-<script src='//rum.monitis.com/get/jsbenchmark.min.js?id=3023' type='text/javascript' async='async'></script>
-<!-- /analytics-script --> 
+<!-- /analytics-script -->
 <?php } ?>

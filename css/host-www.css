@@ -52,7 +52,7 @@ body {
 }
 .dropdown-menu>li>a {
 	text-decoration: none;
-	line-height: 24px;	
+	line-height: 24px;
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
 	background-color: #787f8a;
@@ -108,24 +108,24 @@ body {
 .quicktabs-style-nostyle ul li.active {
 	background: #eaeaea;
 }
-.homepage-news-block .views-field-title, 
-.homepage-news-block .views-field-created, 
+.homepage-news-block .views-field-title,
+.homepage-news-block .views-field-created,
 .homepage-news-block .views-field-body,
-.homepage-campus-news-block .views-field-title, 
-.homepage-campus-news-block .views-field-created, 
+.homepage-campus-news-block .views-field-title,
+.homepage-campus-news-block .views-field-created,
 .homepage-campus-news-block .views-field-body,
 .homepage-campus-news-block .views-field-field_campus,
-.news-blocks .views-field-title, 
-.news-blocks .views-field-created, 
+.news-blocks .views-field-title,
+.news-blocks .views-field-created,
 .news-blocks .views-field-body,
 .news-blocks .views-field-field_campus  {
 	padding: 0px 10px;
 
 }
-.homepage-news-block .views-field-title, 
+.homepage-news-block .views-field-title,
 .homepage-campus-news-block .views-field-title {
 	margin: 10px 0px;
-	
+
 }
 
 /* Homepage Statistics */
@@ -163,9 +163,9 @@ body {
 	font-weight: 200;
 	color: #fff;
 	line-height: normal;
-	position: absolute; 
-	top: 200px; 
-	width: 28%; 
+	position: absolute;
+	top: 200px;
+	width: 28%;
 	background-color:rgba(0, 0, 0, 0.6);
 	margin-top: 50px;
 }
@@ -176,15 +176,38 @@ body {
 	font-weight: 400;
 }
 .homeinstitution a {
-	color: #fff;	
+	color: #fff;
 }
 
 .view-id-homepage_systems .span4:hover, .front .span3:hover {
 	opacity: 0.8;
 }
 .view-more-releases {
-	text-align: right;	
+	text-align: right;
 }
+
+/* Tuition Tables */
+
+.table-tuition-proposed thead :nth-child(8), .table-tuition-proposed thead :nth-child(5), .table-tuition-proposed thead :nth-child(2),
+.table-tuition-history thead :nth-child(2), .table-tuition-history thead :nth-child(4), .table-tuition-history thead :nth-child(6),
+.table-tuition-history thead :nth-child(8), .table-tuition-history thead :nth-child(10)
+ {
+    border-left:5px solid #344051;
+}
+
+.table-tuition-proposed .table-column-border, .table-tuition-history .table-column-border {
+    border-left:5px solid #344051;
+      white-space: nowrap;
+}
+
+.table-tuition-proposed .table-highlight-cell {
+  background: #f5f5f5;
+}
+
+div.table-tuition-history {
+  overflow-x: scroll;
+}
+
 
 /* Testing */
 
@@ -192,7 +215,43 @@ body {
 	width: 100% !important;
 }
 
+/* Critical Conversations */
+.view-critical-conversations-videos .view-filters {
+  background: #eaeaea;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.view-critical-conversations-videos .views-widget-filter-title,
+.view-critical-conversations-videos .input-prepend {
+  width: 100%;
+}
 
+.view-critical-conversations-videos .form-item-title .form-text {
+  width: 98%;
+}
+.page-node-28515 .question-9-diversity input {
+  width: 50px;
+}
+
+.talks-speaker {
+
+}
+.talks-title {
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.1em;
+  line-height: normal;
+}
+.talks-institution {
+  font-weight: bold;
+  font-style: italic;
+  font-size: small;
+}
+.talks-date {
+  font-size: 90%;
+  color: #787f8a;
+}
 
 @media (min-width: 1200px)
 	.front .row-fluid .span4 {
@@ -214,7 +273,7 @@ body {
 		font-size: 30px;
 		line-height: 30px;
 	}
-	
+
 	.homeinstitutiondescription {
 		display: none;
 	}
@@ -231,7 +290,7 @@ body {
 		clear: both;
 		margin-right: 40px;
 
-	}	
+	}
 	#block-views-homepage-systems-block img {
 		display: none;
 	}
@@ -246,7 +305,7 @@ body {
 	.homestat {
 		width: 90%;
 		text-align: center;
-		
+
 	}
 	.homestatnum {
 		font-size: 30px;
@@ -255,7 +314,7 @@ body {
 	.front #main-content.row {
 		margin-right: 0;
 	}
-	
+
 	.view-id-institutions .views-field-field-logo {
 		display: none;
 	}

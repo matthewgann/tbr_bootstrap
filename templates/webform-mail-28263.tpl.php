@@ -35,20 +35,26 @@ foreach ($node->webform['components'] as $key => $component) {
    if (isset($submission->data[$key][0])) {
      $key_converted = ucwords(str_replace('_',' ', $node->webform['components'][$key]['form_key']));
      $submittedvalue = $submission->data[$key][0];
-
      if (isset($submittedvalue)) {
        print '<tr><td style="border: 1px solid black;">'. $key_converted .'</td><td style="border: 1px solid black;">';
   	   if ($node->webform['components'][$key]['type'] != "select") {
     	   print $submittedvalue;
   	   }
   	   else {
-        $selectlistitems = explode("|", $node->webform['components'][$key]['extra']['items']);
-        if (is_numeric($submittedvalue)) {
-                print $selectlistitems[$submittedvalue];
-        }
-        else {
-                 print $submittedvalue;
-        }
+    	  //var_dump($submission->data[$key]);
+
+    	  foreach ($submission->data[$key] as $val) {
+          $selectlistitems = explode("|", $node->webform['components'][$key]['extra']['items']);
+
+          if (is_numeric($submittedvalue)) {
+            print $selectlistitems[$submittedvalue];
+             }
+
+          else {
+             $newkey = $val;
+             print ucwords(str_replace("_", ", ", $newkey)) . '<br>';
+          }
+    	  }
   	   }
 	   print '</td></tr>';
 	   }
@@ -56,3 +62,11 @@ foreach ($node->webform['components'] as $key => $component) {
 }
 ?>
 </table>
+<?php
+//print_r(get_defined_vars());
+//print "<h2>Debug info</h2>";
+//print_r($submission);
+//print_r($email);
+//print "<h2>Debug info</h2>";
+//print_r($node->webform['components']);
+?>

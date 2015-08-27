@@ -12,12 +12,21 @@
 .view-searches .item-list ul h3 {
 	font-size: 16px;
 }
+.view-searches td.views-field-title, .view-searches .views-field-field-cv {
+  white-space: nowrap;
+}
+.view-searches td.views-field-title {
+  font-weight: 600;
+}
+.view-searches td span.file-size {
+  display: none;
+}
 #main #content-wrapper li {
 	margin: 0;
 }
 .form-item-toa-validate {
 	border: 1px solid #d13138;
-	padding: 6px;	
+	padding: 6px;
 }
 .view .attachment .views-field {
 	width: 200px;
@@ -30,4 +39,9 @@
 	border: 1px solid #eaeaea;
 	padding: 4px;
 	margin-bottom: 10px;
+}
+@media (min-width: 979px) {
+	.front #main {
+		margin-top: 0px;
+	}
 }

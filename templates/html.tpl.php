@@ -20,17 +20,20 @@
   <?php print $styles; ?>
   <?php
   	$gettingurlpart = explode('/', $_SERVER['REQUEST_URI']);
-  	$gettingurlpart = $gettingurlpart[1];
+  	$gettingurlpart1 = $gettingurlpart[1];
+
   	$tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 
   	//print $gettingurlpart;
 
-  	$filename = $_SERVER['DOCUMENT_ROOT'] . '/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/' . $gettingurlpart . '.jpg';
+  	$filename = $_SERVER['DOCUMENT_ROOT'] . '/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/' . $gettingurlpart1 . '.jpg';
+
+
   ?>
   <style>
   #header-unit .container #header-unit-inner {
 	  <?php if (file_exists($filename)) { ?>
-		  background: #fff url("/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/<?php echo $gettingurlpart; ?>.jpg");
+		  background: #fff url("/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/<?php echo $gettingurlpart1; ?>.jpg");
 		<?php } else { ?>
 			background: #fff url("/profiles/tbr_hosting/themes/tbr_bootstrap/images/headers/header_1.jpg");
 		<?php }
@@ -39,13 +42,16 @@
   </style>
   <?php print $scripts; ?>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53ea780006145c89"></script>
+  <!--[if IE ]>
+  <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/css/ie.css'; ?>">
+  <![endif]-->
   <!--[if IE 7]>
   <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'open_framework') . '/fontawesome/css/font-awesome-ie7.min.css'; ?>">
   <![endif]-->
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
     <script src="<?php print base_path() . drupal_get_path('theme', 'open_framework') . '/js/html5shiv.js'; ?>"></script>
-   <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/css/ie.css'; ?>">
+   <link rel="stylesheet" href="<?php print base_path() . drupal_get_path('theme', 'tbr_bootstrap') . '/css/ie-9.css'; ?>">
   <![endif]-->
 
 </head>

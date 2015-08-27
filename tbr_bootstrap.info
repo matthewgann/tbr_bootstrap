@@ -8,9 +8,11 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = css/font-awesome.min.css
 scripts[] = js/breakpoints.js
 scripts[] = js/script.js
+scripts[] = js/jquery.doubleScroll.js
 
 regions[header] = Header
 regions[header_unit] = Unit Header
+regions[header_unit_special] = Unit Header Special
 regions[navigation] = Navigation
 regions[search_box] = Search Box
 regions[login] = Login Box

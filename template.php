@@ -51,9 +51,6 @@ function tbr_bootstrap_file_formatter_table($variables) {
   $header = array(t('File'), t('Size'));
   $rows = array();
   foreach ($variables['items'] as $delta => $item) {
-    if ($item['timestamp'] == 0) {
-      $item['timestamp'] = 1234567890;  //or whatever you want for the default date
-    }
     $rows[] = array(
       theme('file_link', array('file' => (object) $item)),
       format_size($item['filesize']),
@@ -61,6 +58,6 @@ function tbr_bootstrap_file_formatter_table($variables) {
     );
   }
 
-  asort($rows);
+  //asort($rows);
   return empty($rows) ? '' : theme('table', array('header' => $header, 'rows' => $rows));
 }

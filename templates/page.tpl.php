@@ -23,8 +23,13 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   <div class="container">
     <div class="global-search-inner">
       <?php
+        if ($tbr_host == "www-dev-tbrweb05-tbr-edu") {
+        include("snippet-search-dev.php");
+        }
+        else {
       // Include Search Snippet
       include("snippet-search.php");
+      }
       ?>
     </div>
   </div>
@@ -44,7 +49,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
         </div>
       </div>
     </div>
-    <div id="top-logo" class="span4"> <a href="https://www.tbr.edu/" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="Tennessee Board of Regents"></a> </div>
+    <div id="top-logo" class="span4"> <a href="https://www.tbr.edu/" style="border: none;"><img src="/<?php echo $tbr_base_theme; ?>/images/wordmark.png" width="399" height="14" alt="TBR"></a> </div>
     <!-- #top-logo -->
   </div>
   <!-- .container -->
@@ -54,7 +59,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 <?php if (!empty($page['emergency'])): ?>
 <div id="emergency-header">
   <div class="container">
-    <div class="alert alert-error">
+    <div class="alert alert-info">
       <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
       <?php print render($page['emergency']); ?> </div>
     <!-- /.alert alert-error -->
@@ -67,7 +72,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
 <div id="header" class="clearfix">
   <div class="container">
     <div class="row">
-      <div id="logo" class="site-logo span4"> <a href="https://www.tbr.edu" title="<?php print t('Home'); ?>" rel="home"> <img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> </div>
+      <div id="logo" class="site-logo span4"><a href="https://www.tbr.edu" title="<?php print t('Home'); ?>" rel="home"> <img src="/<?php echo $tbr_base_theme; ?>/images/tbr_seal_edu.png" alt="<?php print $site_name; ?>" role="presentation" /> </a> </div>
     </div>
   </div>
 </div>
@@ -77,8 +82,8 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   <div class="container">
     <div class="row">
       <ul class="socialnav">
-        <li><a href="https://www.facebook.com/tnregents" class="navfacebook"><i class="fa fa-facebook-square"></i></a></li>
-        <li><a href="https://www.twitter.com/tnregents" class="navtwitter"><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href="https://www.facebook.com/tnregents" class="navfacebook" title="TBR Facebook Page"><i class="fa fa-facebook-square"></i><span class="sr-only">Facebook</span></a></li>
+        <li><a href="https://www.twitter.com/tnregents" class="navtwitter" title ="TBR Twitter Feed"><i class="fa fa-twitter-square"></i><span class="sr-only">Twitter</span></a></li>
       </ul>
     </div>
   </div>
@@ -121,6 +126,17 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
   <div class="container">
     <div id="header-unit-inner" class="row">
       <div class="header-unit-content"> <?php print render($page['header_unit']); ?> </div>
+    </div>
+  </div>
+</div>
+<!-- /#header_unit -->
+<?php endif; ?>
+
+<?php if ($page['header_unit_special']): ?>
+<div id="header-unit-special" class="clearfix header-unit-special">
+  <div class="container">
+    <div class="header-unit-special-inner" class="row">
+      <div class="header-unit-special-content"> <?php print render($page['header_unit_special']); ?> </div>
     </div>
   </div>
 </div>
@@ -366,13 +382,13 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
           <div id="copyright-eeo">
             <p>The Tennessee Board of Regents (TBR) is one of the nation's largest higher education systems, governing 46 post-secondary educational institutions.
               The TBR system includes six universities, 13 two-year colleges and 27 colleges of applied technology, providing programs to more than 240,000 students across the state.</p>
-            <p>The TBR is an AA/EEO employer and does not discriminate on the basis of race, color, national origin, sex, disability, or age in its programs and activities. <a href="https://policies.tbr.edu/system-office/system-office-non-discrimination-policy" title="Non-Discrimination Policy">Full Non-Discrimination Policy.</a></p>
+            <p>The Tennessee Board of Regents does not discriminate against students, employees, or applicants for admission or employment on the basis of race, color, religion, creed, national origin, sex, sexual orientation, gender identity/expression, disability, age, status as a protected veteran, genetic information, or any other legally protected class with respect to all employment, programs, and activities sponsored by the Tennessee Board of Regents. <a href="https://policies.tbr.edu/system-office/system-office-non-discrimination-policy" title="Non-Discrimination Policy">Full Non-Discrimination Policy.</a></p>
           </div>
           <!-- #copyright-eeo -->
 
           <div class="btmlogin" id="bottom-login">
             <?php if(!user_is_logged_in()){ ?>
-            <a href="#myuser" data-toggle="modal"><i class="fa fa-circle-o-notch"></i></a>
+            <a href="#myuser" data-toggle="modal"><i class="fa fa-circle-o-notch"></i><span class="sr-only">Login</span></a>
 
             <!-- Modal -->
             <div id="myuser" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -385,7 +401,7 @@ $tbr_host = str_replace('.', '-', $_SERVER['SERVER_NAME']);
                 <?php //<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button> ?>
               </div>
             </div>
-            <?php } else { echo '<a href="/user/logout"><i class="fa fa-times-circle"></i> Logout</a>'; } ?>
+            <?php } else { echo '<a href="/user/logout"><i class="fa fa-times-circle">Logout</i><span class="sr-only">Logout</span></a>'; } ?>
           </div>
           <!-- #bottom-login -->
         </div>

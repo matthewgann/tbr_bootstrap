@@ -5,6 +5,10 @@ dark blue - #344051
 
 /* GLOBAL ********************************* */
 /* ----- System Fixes ---------------- */
+body, input, select {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
 .clearboth {
 	clear: both;
 }
@@ -57,7 +61,25 @@ a.readmore:before {
 	font-size: 1.2em;
 	font-weight: 600;
 }
+
+.alert-info {
+  color: #fff;
+  background-color: #787f8a;
+  border-color: #344051;
+}
+
 /* ----- Custom Fonts ---------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 /* ----- Text ------------------------ */
 h1 {
 	font-weight: 600;
@@ -72,10 +94,16 @@ h1 {
 .views-field-title a {
 	text-decoration: none;
 }
+td.nowrap {
+  	white-space: nowrap;
+}
 .label-above {
 	/* color: #d13138; */
 	border-bottom: 1px solid #eaeaea;
 	font-weight: 400;
+}
+h2.label-above {
+  	font-weight: 600;
 }
 .h2header {
 	border-bottom: 3px solid #eaeaea;
@@ -253,7 +281,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	border-radius: 0;
    -webkit-border-radius: 0px;
-   border: 2px solid #ccc;
+   border: 1px solid #ccc;
 }
 select {
 	width: auto;
@@ -262,12 +290,40 @@ select {
 .node-webform .form-item label {
 	display: inherit;
 }
+.node-webform .form-type-checkbox input, .node-webform .form-type-checkbox label {
+  float: left;
+  display: inline;
+}
+.node-webform .form-type-checkbox input {
+  margin-left: 40px;
+}
+.node-webform div.form-type-checkbox {
+  display: block;
+  clear: both;
+}
+.node-webform div.webform-component-checkboxes {
+  padding-bottom: 20px;
+}
+.node-webform div.description {
+  font-style: italic;
+  float: right;
+}
+.node-webform .radio-inline div.form-item {
+  clear: none;
+}
+
+.node-webform .radio-inline div.form-item label {
+  margin-right: 16px;
+}
 /* HEADER ********************************* */
 /* ----- Emergency Header --------------- */
 #emergency-header {
 	margin-top: 10px;
 }
 /* ----- Global Search ----------------*/
+#google-cse-results-gadget {
+  display: none;
+}
 #global-search-form input, #global-search-form label, #global-search-form button {
 	float: left;
 }
@@ -282,7 +338,7 @@ select {
 	height: 50px;
 	margin-top: 0;
 	clear: both;
-	color: #eaeaea;
+	color: #fff;
 	overflow: hidden;
 }
 #global-search-form input[type="text"] {
@@ -396,6 +452,7 @@ select {
     content: "\f080";
     margin-right: 2px;
 }
+
 /* ----- Unit Header --------------- */
 #header-unit {
 	margin-bottom: 16px;
@@ -438,6 +495,26 @@ select {
 	font-size: 30px;
 	font-weight: 400;
 }
+
+/* ----- Unit Header Special --------------- */
+.header-unit-special {
+	margin-bottom: 16px;
+	margin-top: -40px;
+	/*background: #fff;*/
+}
+.header-unit-special .container .header-unit-special-inner {
+	width: 100%;
+}
+.header-unit-special-content img {
+  width: 100%;
+  height: auto;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  border: 20px solid #fff;
+  box-shadow: 0px 0px 20px #888888;
+}
+
 /* ----- Search Box ------------------ */
 /* ----- Logo ------------------------ */
 #header #logo img {
@@ -548,6 +625,10 @@ select {
  -moz-border-radius: 6px 6px 0 0;
  border-radius: 6px 6px 0 0;
 }
+
+.block-menu-block {
+  margin-bottom: 10px;
+}
 /* 2nd level */
 .nav-list .nav-list > li > a {
 	padding-left: 30px;
@@ -637,6 +718,8 @@ select {
 	border-top: 6px solid #344051;
 	background: #eaeaea;
 }
+
+
 /* FOOTER ********************************* */
 #footer-logo {
 	text-align: center;
@@ -701,6 +784,13 @@ select {
     content: "\f05a";
     margin-right: 10px;
 }
+.note2 {
+	font-style: italic;
+	font-size: 0.9em;
+	position: relative;
+	line-height: normal;
+	color: #787f8a;
+}
 #main fieldset:not(.horizontal-tabs-pane) {
 	position: relative;
 	margin: 15px 0;
@@ -749,6 +839,9 @@ select {
 	text-align: right;
 	margin-right: 10px;
 }
+td .webform-component-select label, td .webform-component-number label, td .webform-component-textfield label, td .webform-component-email label, td .webform-component-browserinfo label {
+  min-width: 0;
+}
 .webform-component-select input, .webform-component-number input, .webform-component-textfield input, .webform-component-email input {
 	display: inline-block;
 	margin-bottom: 0;
@@ -761,15 +854,18 @@ select {
 	margin-left: 40px;
 }
 .webform-component-radios .form-type-radio {
-	clear: both;
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 0px 0px 0px 10px;
 }
 .webform-component-radios .form-type-radio input {
-	float: left;
 	margin-right: 10px;
 }
 .webform-component-radios .form-type-radio label {
-	float: left;
+  display: block;
 }
+
 .webform-client-form .form-actions {
 	width: 96%;
 	text-align: center;
@@ -796,7 +892,13 @@ select {
 .webform-next, .webform-submit {
 	margin-left: 10px;
 }
-
+.webform-component-number input.form-number {
+  width: 70px;
+}
+.webform-number-50 {
+	width: 50px;
+	max-width: 50px;
+}
 
 .field-suffix {
 	margin-top: 2px;
@@ -900,14 +1002,14 @@ select {
 	padding: 0.5em 0.6em 0 0.6em;
 	text-align: center;
 }
-.resources .label-above {
+.node-page .resources .label-above {
 	display: block;
 	width: 100%;
 	background: #787f8a;
 	color: #eaeaea;
 
 }
-.resources .label-above:before {
+.node-page .resources .label-above:before {
     font-size: 1.0em;
     font-family: FontAwesome;
     top: 0px;
@@ -916,10 +1018,10 @@ select {
     margin-right: 10px;
     margin-left: 10px;
 }
-.resources .resources-inner {
+.node-page .resources .resources-inner {
 	padding: 10px;
 }
-.resources {
+.node-page .resources {
 	display: block;
 	width: 300px;
 	float: right;
@@ -951,9 +1053,15 @@ select {
 }*/
 
 @media print {
-.group-topics, #breadcrumb {
-	display: none;
-}
+  .group-topics, #breadcrumb {
+	  display: none;
+  }
+  .table-print-break table {
+    page-break-after: always;
+  }
+  .noprint {
+    display: none;
+  }
 }
 /*
 .ds-1col.node.node-policy-guideline .list-columns ul {
@@ -1045,6 +1153,13 @@ table.views-table {
 }
 .view-tbr-staff-directory .view-header .group-right {
 	width: 30%;
+}
+
+.ds-2col-stacked-fluid > .group-left {
+  width: 49%;
+}
+.ds-2col-stacked-fluid > .group-right {
+  width: 49%;
 }
 
 /* Tables - Forms, Bids */
@@ -1250,6 +1365,9 @@ td.diff-section-title, div.diff-section-title {
 	.span9 {
 		width: 850px;
 	}
+	.span12 {
+  	width: 1260px;
+	}
 }
  @media (max-width: 1382px) {
 	body {
@@ -1423,6 +1541,10 @@ td.diff-section-title, div.diff-section-title {
 	#content-wrapper li {
 		overflow: visible;
 	}
+	#header-unit {
+  margin-bottom: 16px;
+    margin-top: 20px;
+  }
 }
 #edit-comment-body-und-0-format.filter-wrapper {
 	display: none;
